@@ -47,17 +47,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 })
 3. 2.12 Assignment: Created two components "WarningAlert and SuccessAlert" through the command "ng g c WarningAlert" and "ng g c SuccessAlert" and added CSS styling to it.
 4. 2.13 Types of Binding
-  1. String Interpolation eg. <p>Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
-  2. Property Binding eg. <button class= "btn btn-primary" [disabled] = "!addServer">Add Server</button><br />
-  3. Event Binding eg. <button class = "btn btn-primary" [disabled] = "!addServer" (click) = "onCreateServer()">Add Server</button>
-  4. Two-way Databinding <input type="text" class="form-control" [(ngModel)] = "serverName">
+   1. String Interpolation eg. <p>Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+   2. Property Binding eg. <button class= "btn btn-primary" [disabled] = "!addServer">Add Server</button><br />
+   3. Event Binding eg. <button class = "btn btn-primary" [disabled] = "!addServer" (click) = "onCreateServer()">Add Server</button>
+   4. Two-way Databinding <input type="text" class="form-control" [(ngModel)] = "serverName">
 5. 2.26 Directives
-  1. *ngIf : prints something based on a condition. eg. <p *ngIf = "isServerCreated">Server is created! server name is {{serverName}}</p>
-  2. [ngStyle] : Adds CSS styles to a tag. 
+   1. *ngIf : prints something based on a condition. eg. <p *ngIf = "isServerCreated">Server is created! server name is {{serverName}}</p>
+   2. [ngStyle] : Adds CSS styles to a tag. 
       eg. <p [ngStyle] = "{color: getTextColor()}">Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
       The above line prints the text in green.
-  3. [ngClass] : Adds or doesnot add CSS classes. It can be done in 5- 6 ways. Look at server.component.ts, server.component.css, server.component.html
-  4. [ngFor] : With *ngFor we can re-use a component.
+   3. [ngClass] : Adds or doesnot add CSS classes. It can be done in 5- 6 ways. Look at server.component.ts, server.component.css, server.component.html
+   4. [ngFor] : With *ngFor we can re-use a component.
       In the below example the componet "<app-server>" is rendered twice on the web page because the array variable "servers" has two elements
       eg. In servers.component.html
           <div class = "servers">
@@ -67,9 +67,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
           servers = ['Testserver', 'Testserver 2'];
 6. 2.32 Assignment 3: display-details component
    1.  Add A button which says 'Display Details'
-  2. Add a paragraph with any content of your choice (e.g. ' Secret Passwo rd = tuna')
-  3. Toggle the displaying of that paragraph with the button created in the first step
-  4. Log all button clicks in an array and output that array below the secret paragraph
+   2. Add a paragraph with any content of your choice (e.g. ' Secret Passwo rd = tuna')
+   3. Toggle the displaying of that paragraph with the button created in the first step
+   4. Log all button clicks in an array and output that array below the secret paragraph
   (maybe Log a timestamp or simply an incrementing number) 
-  5. Starting at the 5th log item, give all future log items a blue background (via
+   5. Starting at the 5th log item, give all future log items a blue background (via
   ngstyle) and white color (ngclass ) 
