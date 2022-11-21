@@ -66,7 +66,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
           In servers.component.ts
           servers = ['Testserver', 'Testserver 2'];
 6. 2.32 Assignment 3: display-details component
-   1.  Add A button which says 'Display Details'
+   6.1.  Add A button which says 'Display Details'
    2. Add a paragraph with any content of your choice (e.g. ' Secret Passwo rd = tuna')
    3. Toggle the displaying of that paragraph with the button created in the first step
    4. Log all button clicks in an array and output that array below the secret paragraph
