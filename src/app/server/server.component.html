@@ -1,0 +1,19 @@
+<div>
+    <!-- String Interpolation by passing properties -->
+    <p [ngStyle] = "{backgroundColor: getTextColor()}">Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+    <!-- [ngClass] can be used in following ways -->
+    <b><p>[ngClass] can be used in the following ways</p></b>
+    <p [ngClass] = "'online'">1. Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+    <!-- In the following code the CSS class "online" is replaced by "other" -->
+    <p [ngClass] = "'online other'">2. Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+    <!-- In the following code the CSS class is choosen based on the condition -->
+    <p [ngClass] = "serverTest === 'online' ? 'online' : 'offline'">3. Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+    <!-- In the following code the CSS class is choosen based on the object -->
+    <p [ngClass] = "{online: false, offline: true }">4. Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+    <p [ngClass] = "{online: true}">5. Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+    <p [ngClass] = "{online: serverStatus === 'Online'}">6. Server One: ID: {{serverId}} STATUS: {{serverStatus}} // Default</p>
+    <!-- String Interpolation by passing method -->
+    <p>Server One: ID: {{serverId}} STATUS: {{getServerStatus()}} // By passing method</p>
+    <!-- String Interpolation by passing values in an array -->
+    <p>Server One: ID: {{serverInfo[0]}} STATUS: {{serverInfo[1]}} // By passing array</p>
+</div>

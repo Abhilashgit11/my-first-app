@@ -1,0 +1,13 @@
+.online {
+    color: red;
+    /* font-weight: bold; */
+}
+
+.other {
+    color:blue;
+    font-weight: bold;
+}
+
+.offline {
+    color:violet;
+}

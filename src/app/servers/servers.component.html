@@ -1,0 +1,37 @@
+<!-- 2.17 Passing data with Event Binding-->
+<label>Server Name</label>
+<input type="text" class="form-control" (input) = "onEnterServerName($event)">
+<p>{{serverName}}</p>
+
+<!-- Two-way Databinding -->
+<label>Alternate Server Name</label>
+<input type="text" class="form-control-sm" [(ngModel)] = "serverName">
+<p>{{serverName}}</p>
+
+<div class = "servers-heading">
+    <h3>List of Servers</h3>
+</div>
+
+<div class = "servers">
+    <!-- 2.30 Directives *ngFor (ngFor is structural directive)-->
+    <app-server *ngFor = "let server of servers"></app-server>
+</div>
+
+<div class = "add-server">
+    <!-- 2.15 Property Binding & 2.17 Event Binding-->
+    <button class = "btn btn-primary" [disabled] = "!addServer" (click) = "onCreateServer()">Add Server</button>
+    <!-- 2.26 Directives *ngIf (ngIf is structural directive)-->
+    <p *ngIf = "isServerCreated else noServer">Server is created! server name is {{serverName}}</p>
+    <!-- The following acts as an else condition for *ngIf -->
+    <ng-template #noServer>
+        <p>No Server is created!</p>
+    </ng-template>
+</div>
+<br />
+
+<div class="server-status">
+    <p [innerText] = "serverNo"></p>
+    <p>{{serverCreationStatus}}</p>
+</div>
+
+

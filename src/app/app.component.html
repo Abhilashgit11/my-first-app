@@ -1,0 +1,30 @@
+<!-- 1.7 -->
+<input type="text" [(ngModel)]="title"/>
+<!-- String Interpolation -->
+<p>{{title}}</p>
+
+
+<!--1.4 - 1.7-->
+<div>
+    <div>
+        <div>
+            <h3 class="root-component">I'm in the app component</h3>
+            <hr>
+            <!-- if referenced with selecter = '[app-servers]' in .ts file and is called attribute style selector-->
+            <!-- <div app-servers></div> -->
+            <!-- if referenced with selecter = '.app-servers' in .ts file and is called calss style selector-->
+            <!-- <div class="app-servers"></div> -->
+            <!-- The following method is the most common, is called Element Style selector-->
+            <app-servers></app-servers>
+        </div>
+    </div>
+</div>
+
+<!-- 1.12 -->
+<label style="font-weight: bold;">Assignment 1: Creating two components and adding style to it</label>
+<app-warning-alert></app-warning-alert>
+<app-success-alert></app-success-alert>
+<app-username></app-username>
+<br />
+<label style="font-weight: bold;">Assignment 3: Creating a button, toggle text display with that button and log all clicks</label>
+<app-display-details></app-display-details>

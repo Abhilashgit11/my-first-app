@@ -1,0 +1,12 @@
+<div class = "displayDetails">
+    <button class = "btn btn-primary" (click) = "showText = !showText" >Display Details</button>
+    <p [hidden] = "!showText">Secret Password = tuna</p>
+    <p *ngIf = "showText">Secret Password = tuna</p>
+</div>
+<div>
+    <button class = "btn btn-primary" (click) = "onToggleDetails()" >Display Details to log</button>
+    <div 
+        *ngFor = "let logItem of log; let i = index"
+        [ngClass] = "{'white-text' : i >= 5}"
+    >{{logItem}} {{logTime}}</div>
+</div>
